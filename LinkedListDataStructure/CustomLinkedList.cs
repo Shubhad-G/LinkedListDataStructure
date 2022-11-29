@@ -25,6 +25,22 @@ namespace LinkedListDataStructure
 
             }
         }
+        public void addLast(int data)
+        {
+            Node newNode = new Node(data);
+            if (head == null)//to check whether there are any nodes present or not
+                head = newNode;//if there are no nodes new node becomes the head node 
+            else
+            {
+                Node temp = head;
+                while (temp.referenceToNextNode != null)//to iterate throgh the linked list
+                {
+                    temp = temp.referenceToNextNode;
+                }
+                temp.referenceToNextNode = newNode;//here adding the linked list at the end of linked list
+            }
+            Console.WriteLine("{0} is inserted at the end of linked list", newNode.data);
+        }
         public void displayLinkedList()
         {
             Node temp = head;
