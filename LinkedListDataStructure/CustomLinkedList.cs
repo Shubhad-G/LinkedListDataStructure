@@ -108,7 +108,7 @@ namespace LinkedListDataStructure
                 {
                     if (temp.data == data)
                     {
-                        Console.WriteLine("{0} is present in the linked list", temp.data);
+                        Console.WriteLine("\n{0} is present in the linked list", temp.data);
                         break;
                     }
                     else
