@@ -88,12 +88,32 @@ namespace LinkedListDataStructure
                 Console.WriteLine("Linked list is empty");
             else
             {
-                while (temp.referenceToNextNode != null)
+                while (temp.referenceToNextNode.referenceToNextNode != null)
                 {
                     temp = temp.referenceToNextNode;
-                    temp.referenceToNextNode = null;
+                    
                 }
+                temp.referenceToNextNode = null;
                 Console.WriteLine("{0} is deleted from the linked list", data);
+            }
+        }
+        public void searchList(int data)
+        {
+            Node temp = head;
+            if (temp == null)
+                Console.WriteLine("Linked list is empty");
+            else
+            {
+                while(temp.referenceToNextNode!=null)
+                {
+                    if (temp.data == data)
+                    {
+                        Console.WriteLine("{0} is present in the linked list", temp.data);
+                        break;
+                    }
+                    else
+                        temp = temp.referenceToNextNode;
+                }
             }
         }
     }
