@@ -11,6 +11,11 @@ namespace LinkedListDataStructure
         static void Main(string[] args)
         {
             Console.WriteLine("implementation of simple Single Linked List program");
+            CustomLinkedList node = new CustomLinkedList();
+            node.addFirst(70);
+            node.addFirst(30);
+            node.addFirst(56);
+            node.displayLinkedList();
             Console.ReadLine();
         }
     }

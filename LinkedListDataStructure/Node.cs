@@ -8,6 +8,13 @@ namespace LinkedListDataStructure
 {
     internal class Node
     {
+        public int data;
+        public Node referenceToNextNode;
+
+        public Node(int data)
+        {
+            this.data = data;
+        }
 
     }
 }
