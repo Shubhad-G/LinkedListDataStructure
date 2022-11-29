@@ -15,7 +15,7 @@ namespace LinkedListDataStructure
             node.addFirst(56);
             node.addLast(70);
             node.addBetween(30);
-            node.popFirst(56);
+            node.popLast(70);
             node.displayLinkedList();
             Console.ReadLine();
         }

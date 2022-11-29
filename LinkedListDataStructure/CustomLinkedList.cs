@@ -52,6 +52,7 @@ namespace LinkedListDataStructure
                 newNode.referenceToNextNode = head.referenceToNextNode;
                 head.referenceToNextNode = newNode;
             }
+            Console.WriteLine("{0} is inserted between the list",data);
         }
         public void displayLinkedList()
         {
@@ -75,8 +76,24 @@ namespace LinkedListDataStructure
                 Console.WriteLine("Linked list is empty");
             else
             {
-                head = head.referenceToNextNode;
+                head = head.referenceToNextNode;//made the next node as head by assigning the link of head node's next reference to next node and hence the link is deleted
                 Console.WriteLine("{0} is deleted from the linked list",data);
+            }
+        }
+          
+        public void popLast(int data)
+        {
+            Node temp = head;
+            if (temp == null)
+                Console.WriteLine("Linked list is empty");
+            else
+            {
+                while (temp.referenceToNextNode != null)
+                {
+                    temp = temp.referenceToNextNode;
+                    temp.referenceToNextNode = null;
+                }
+                Console.WriteLine("{0} is deleted from the linked list", data);
             }
         }
     }
