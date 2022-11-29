@@ -41,6 +41,18 @@ namespace LinkedListDataStructure
             }
             Console.WriteLine("{0} is inserted at the end of linked list", newNode.data);
         }
+
+        public void addBetween(int data)
+        {
+            Node newNode = new Node(data);
+            if (head == null)
+                head = newNode;
+            else
+            {
+                newNode.referenceToNextNode = head.referenceToNextNode;
+                head.referenceToNextNode = newNode;
+            }
+        }
         public void displayLinkedList()
         {
             Node temp = head;
