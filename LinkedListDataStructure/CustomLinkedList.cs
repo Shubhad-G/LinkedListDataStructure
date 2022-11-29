@@ -68,5 +68,16 @@ namespace LinkedListDataStructure
                 }
             }
         }
+        public void popFirst(int data)
+        {
+            Node temp = head;
+            if (temp == null)
+                Console.WriteLine("Linked list is empty");
+            else
+            {
+                head = head.referenceToNextNode;
+                Console.WriteLine("{0} is deleted from the linked list",data);
+            }
+        }
     }
 }
