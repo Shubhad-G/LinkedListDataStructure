@@ -116,5 +116,25 @@ namespace LinkedListDataStructure
                 }
             }
         }
+        public void insertAfter(int data,int afterData)
+        {
+            Node newNode=new Node(data);
+            Node temp = head;
+            if (temp == null)
+                Console.WriteLine("Linked list is empty");
+            else
+            {
+                while (temp.referenceToNextNode!=null)
+                {
+                    if (temp.data == afterData)
+                    {
+                        newNode.referenceToNextNode = temp.referenceToNextNode;
+                        temp.referenceToNextNode = newNode;
+                        Console.WriteLine("{0} is inserted between {1} and {2}", data, afterData, newNode.referenceToNextNode.data);
+                    }
+                    temp = temp.referenceToNextNode;
+                }
+            }
+        }
     }
 }
