@@ -19,6 +19,9 @@ namespace LinkedListDataStructure
             node.searchList(30);
             node.insertAfter(40, 30);
             node.displayLinkedList();
+            node.deleteBetween(40);
+            node.displayLinkedList();
+            node.size();
             Console.ReadLine();
         }
     }

@@ -61,7 +61,7 @@ namespace LinkedListDataStructure
                 Console.WriteLine("Linked list empty");
             else
             {
-                Console.Write("linked list elements\n");
+                Console.Write("\nlinked list elements\n");
                 while (temp != null)
                 {
                     Console.Write(" " + temp.data);
@@ -134,6 +134,44 @@ namespace LinkedListDataStructure
                     }
                     temp = temp.referenceToNextNode;
                 }
+            }
+        }
+        public void deleteBetween(int data)
+        {
+            Node temp = head;
+            
+            if (temp == null)
+                Console.WriteLine("Linked list is empty");
+            else
+            {
+                while (temp.referenceToNextNode!=null)
+                {
+                  
+                    if (temp.referenceToNextNode.data==data)
+                    { 
+                        temp.referenceToNextNode = temp.referenceToNextNode.referenceToNextNode;
+                        Console.WriteLine("\n{0} is deleted from the list", temp.data);
+                        break;
+                    }
+                    temp = temp.referenceToNextNode;  
+                }
+               
+            }
+        }
+        public void size()
+        {
+            Node temp = head;
+            int elements=0;
+            if (temp == null)
+                Console.WriteLine("Linked list is empty hence there are {0} elements in the linked list",elements);
+            else
+            {
+                while (temp != null)
+                {
+                    elements++;
+                    temp = temp.referenceToNextNode;
+                }
+                Console.WriteLine("\nSize of linked list is: {0}", elements);
             }
         }
     }
