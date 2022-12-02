@@ -150,7 +150,7 @@ namespace LinkedListDataStructure
                     if (temp.referenceToNextNode.data==data)
                     { 
                         temp.referenceToNextNode = temp.referenceToNextNode.referenceToNextNode;
-                        Console.WriteLine("\n{0} is deleted from the list", temp.data);
+                        Console.WriteLine("\n{0} is deleted from the list", data);
                         break;
                     }
                     temp = temp.referenceToNextNode;  
